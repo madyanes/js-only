@@ -18,3 +18,15 @@ console.log('a: ' + map1.get('a')) // 100
 
 map1.delete('c')
 console.log('map1.size: ' + map1.size) // 2
+
+const family = new Map()
+family.set('father', 'Sugeng Winarso')
+family.set('mother', 'Arti')
+family.set('me', 'Madyan Eka Septian')
+family.set('sister1', 'Nadya Putri Sabilla')
+family.set('sister2', 'Elok Cahya Maharani')
+
+for (const member of family) {
+  const [role, name] = member // returns a 2-member array of [key, value] for each iteration
+  console.log(`${role} ==> ${name}`)
+}
