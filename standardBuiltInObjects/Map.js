@@ -11,10 +11,10 @@ map1.set('b', 2)
 map1.set('c', 3)
 map1.set('b', 4) // A key in the Map may only occur once; it is unique in the Map's collection.
 
-console.log(map1.size) // 3
+console.log('map1.size: ' + map1.size) // 3
 
 map1.set('a', 100)
-console.log(map1.get('a')) // 100
+console.log('a: ' + map1.get('a')) // 100
 
 map1.delete('c')
-console.log(map1.size) // 2
+console.log('map1.size: ' + map1.size) // 2
