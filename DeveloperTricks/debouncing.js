@@ -22,10 +22,12 @@
  * With debouncing, only the final input after the user stops typing for a specified duration will trigger the API call.
  */
 
-function debounce(func, wait) {
+export default function debounce(func, wait) {
   let timeout
 
   return function executedFunction(...args) {
+    // dalam contoh kasus pada file 'debouncingExample.html',
+    // args akan menerima argumen dari method addEventListener.
     const later = () => {
       clearTimeout(timeout)
       func(...args)

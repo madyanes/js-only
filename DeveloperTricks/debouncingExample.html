@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debouncing Example</title>
+  </head>
+  <body>
+    <header>
+      <h1>Debouncing Example</h1>
+    </header>
+    <main>
+      <label for="userInput">Type anything:</label>
+      <input type="text" id="userInput" />
+      <div id="output"></div>
+    </main>
+
+    <script type="module">
+      import debounce from './debouncing.js'
+
+      function inputHandler(e) {
+        output.textContent = e.target.value
+      }
+
+      const userInput = document.querySelector('#userInput')
+      const output = document.querySelector('#output')
+
+      userInput.addEventListener('input', debounce(inputHandler, 300))
+    </script>
+  </body>
+</html>
